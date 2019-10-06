@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry} %Page margins
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{ragged2e}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{titlesec}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Ex ante econometric evaluation of social programs}
+\fancyhead[R]{G. Planiteros}
+\fancyfoot[C]{\thepage}
+
+%\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\indep}{\perp \!\!\! \perp}
+\newcommand{\nindep}{\not\!\perp \!\!\! \perp}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus.2ex}
+
+\parindent 0ex
+\setlength{\parskip}{1em} %Paragraph spacing
+\renewcommand{\baselinestretch}{1.5} %Line spacing
+%\titlespacing{\section}{0pc}{3pc}{1pc}
+
+\begin{document}
+
+
+\begin{titlepage}
+\title{Ex ante econometric evaluation of social programs}
+\author{George Planiteros}
+\date{\today}
+\renewcommand{\baselinestretch}{1.2} %Line spacing
+\maketitle
+\begin{abstract}
+\noindent This paper addresses the central policy evaluation question of forecasting the impact of interventions never previously experienced. I deviate from the “causal” approach adopting a more moderate philosophical view for these type of questions, the probabilistic view as defined in Briggs.
+\end{abstract}
+
+\noindent \textit{Keywords}: Counterfactuals, Treatment Effects
+\end{titlepage}
+
+\section{Introduction}
+%\justifying
+
+This paper aspires to address the central policy evaluation question of forecasting the impact of interventions never previously experienced. I deviate from the “causal” approach adopting a more moderate philosophical view for these type of questions, the probabilistic view as defined in Briggs …
+	
+The innovative feature of this paper is the introduction of the treatment effect (or causality) methodological platform in addressing a problem that is currently, to the best of our knowledge, completely out of the scope of the particular literature: forecasting the effects of a policy never previously implemented. A relatively recent classification of the problems in social programs econometric evaluation recognizes three distinct problems (Heckman and Vytlacil, 2007): P1-2-3. The analysis is based on their framework, acknowledging three distinct tasks in the analysis of causal models which can be summarized as follows: (i) the rules used for the definition of counterfactuals, (ii) the identification of causal parameters from hypothetical population distributions and (iii) the identification of causal models from the “real” sample data.
+
+Moreover, the paper pioneers by proposing an approach in the structure of econometric literature that brings together different scientific sub-disciplines, usually concealed from each other, making explicit the underlying links between them. Every theoretical or empirical econometric paper adopts consciously or - in most cases - unconsciously a particular scientific approach, remaining silent though on the consequences of the specific choice for the subsequent analysis. Usually justification on the selected method and the model to be estimated are completely absent. This paper favors making the philosophical and scientific context of the analysis clear, increasing the adopted method’s degrees of consciousness. Therefore, it is of great importance to bring to the front philosophy of science as a vehicle towards better understanding and unification of a continuously dispersed field.
+
+
+\section{Methodological Issues}
+\pagebreak
+
+\section{The Identification Problem}
+
+\subsection{The Evaluation Problem}
+
+\subsection{The Selection Problem}
+
+\pagebreak
+\subsection{Identifying Distributions of Treatment Effects}
+In this subsection we move beyond means as descriptions of policy outcomes and considers joint counterfactual distributions of outcomes (for example, $F(y_1, y_0)$, gains, $F(y_1 - y_0)$ or outcomes of participants $F(y_1, y_0|D=1)$. These are the \textit{ex post} distributions realized after treatment is received. We also analyze ex ante distributions, inferring the information available to agents when they make their choices.
+
+Using the joint distribution of counterfactuals, it is possible to develop a more nuanced understanding of the distributional impacts of public policies, and to move beyond comparisons of aggregate distributions induced by different policies to consider how people in different portions of an initial distribution are affected by public policy.
+
+The problem of recovering joint distributions from cross-section data has two aspects: (i) the selection problem, i.e. from data on outcomes $F_1(y_1|D=1, X$, $F_0(y_0|D=0, X$, how can $F_1(y_1|X$ and $F_0(y_0|X)$ be respectively recovered and (ii) how can the joint distribution $F(y_0, y_1|X)$ be constructed from the two marginal distributions?
+
+The reason for moving beyond marginal distributions is that they do not keep track of individual fortunes across different policy states neither do they decompose overall outcomes in each policy state into their component parts $Y_0$, $Y_1$. Moreover if one seeks to know the proportion of people who benefit in terms of income from the program in gross terms $(Pr(Y_1 \geqslant Y_0|\mathcal{I}))$, one needs to know the joint distribution of $Y_0, Y_1)$ given the appropriate information set.
+
+There are two basic approaches in the literature for the identification of $F(y_0, y_1|X)$: (i) those that postulate assumptions about dependence between $Y_0$ and $Y_1$ and (ii) those that are based on information from agent participation rules and additional data on choice.
+
+\subsubsection{Approaches making dependence assumptions connecting $Y_0$ and $Y_1$}
+
+\paragraph{Independence or Matching}
+Matching assumes that conditional on observed variables $Q$ and $\mathcal{Q}$ there is no selection problem: $(Y_0 \nindep D | X, \mathcal{Q})$ and $(Y_1 \indep D | X, \mathcal{Q})$. This approach which is based on matching assumes that: (i) there is access to variables $\mathcal{Q}$ that have the property that conditional on $\mathcal{Q}$, $F_0(y_0| D = 0, X, \mathcal{Q} = F_0(y_0| X, \mathcal{Q}$ and $F_1(y_1| D = 1, X, \mathcal{Q} = F_1(y_1| X, \mathcal{Q}$ and (ii) all of the dependence between $Y_0$ and $Y_1$ comes through $\mathcal{Q}$. It follows that $$F(y_0, y_1 | X, \mathcal{Q}) = F_1(y_1| X, \mathcal{Q})F_0(y_0)| X, \mathcal{Q}).$$
+
+\paragraph{The common coefficient approach}
+The traditional approach in identifying joint distributions is to assume that the joint distribution $F(Y_0, Y_1 | X)$ is a degenerate, one dimensional distribution. This approach assumes that treatment has the same effect on everyone with the same observable characteristics $X$ and the effect is $Y_1-Y_0 = \Delta$, where $\Delta$ is a constant given $X$. Existence of $\Delta$ implies a perfect ranking across quantiles of the distributions of $Y_0$ and $Y_1$ so the joint distribution can be identified by the difference in the quantiles between $Y_0$ and $Y_1$ for any quantile.
+
+\theoremstyle{definition}
+\begin{definition}\textit{In mathematics, a degenerate distribution is a probability distribution in a space (discrete or continuous) with support only on a space of lower dimension. If the degenerate distribution is univariate (involving only a single random variable) it is a deterministic distribution and takes only a single value.}
+\end{definition}
+
+\paragraph{More general dependence assumptions}
+This approach relaxes the common coefficient assumption by postulating perfect ranking in the positions of individuals in the $F_1(y_1 | X)$ and $F_0(y_0 | X)$ distributions. The best in one distribution is the best in the other. Assuming continuous and strictly increasing marginal distributions, they postulate that quantiles are perfectly ranked so $Y_1 = F_{1}^{-1}(F_0(Y_0))$. An alternative assumption is that people are perfectly inversely ranked so the best in one distribution is the worst in the other: $Y_1 = F_{1}^{-1}(1 - F_0(Y_0))$.
+
+One can associate quantiles across the marginal distributions more generally. Heckman, Smith and Clements (1997) use Markov transition kernels that stochastically map quantiles of one distribution into quantiles of another. They define a pair of Markov kernels $M(y_1, y_0 | X)$ and $\tilde{M}(y_1, y_0 | X)$ with the property that they map marginals into marginals: 
+$$F_1(y_1 | X) = \int M(y_1, y_0 | X)dF_0(y_0) | X)$$
+$$F_0(y_0 | X) = \int \tilde{M}(y_0, y_1 | X)dF_1(y_1) |X)$$
+
+\begin{definition} \textit{Markov kernels: Let $(X,\mathcal {A})$ and $(Y, \mathcal{B})$ be measurable spaces. A Markov kernel $\kappa :X \to Y$ with source $(X,\mathcal {A})$ and target $(Y, \mathcal{B})$ is a map $\kappa :\mathcal {B} \times X \to [0,1]$ with the following properties:
+\begin{enumerate}
+\setlength\itemsep{-0.4em}
+\item For every (fixed) $B \in \mathcal {B}$, the map $x \mapsto \kappa(B, x)$ is $\mathcal{A}$-measurable
+\item For every (fixed) $x \in X$, the map $B \mapsto \kappa(B, x)$ is a probability measure on $(Y, \mathcal{B})$
+\end{enumerate}
+In other words it associates to each point $x \in X$ a probability measure $\kappa(dy|x):B \mapsto \kappa(B,x)$ on $(Y, \mathcal{B})$ such that, for every measurable set $B\in \mathcal{B}$, the map $x \mapsto \kappa(B, x)$ is measurable with respect to the $\sigma$-algebra $\mathcal{A}$.}
+\end{definition}
+
+Allowing these kernels to be degenerate produces various deterministic transformations, including the two previously presented, as special cases of a general mapping. Different ($M$, $\tilde{M}$) pairs produce different joint distributions. These transformations supply the missing information needed to construct the joint distributions.
+
+The perfect ranking assumption imposes a strong and arbitrary dependence across distributions. Many authors maintain this assumption (under the rubric of "rank invariance") in order to identify the distribution of treatment effects.
+
+An analysis of the outcome impact distribution $F_{\Delta}(y_1 - y_0)$ may postulate various assumptions about dependence between $Y_1$ and $Y_0$. Given that $F_1(y_1)$ and $F_0(y_0)$ can be identified separately the estimated impact distributions for different assumed levels of dependence $\tau$ (Kendall's rank correlation) can be reported for selected percentiles. Since without further information in hand, the joint distribution is not identified, the data are consistent with all values of $\tau$ and so each result is a possible outcome distribution.
+
+\paragraph{Independence of the gain from the base}
+An alternative assumption about the dependence across outcomes is that $Y_1 = Y_0 + \Delta$, where $\Delta$, the treatment effect, is a random variable stochastically independent of $Y_0$ given $X$, i.e., $Y_0 \indep \Delta | X$. 
+
+This assumption states that the gain from participating in the program is independent of the base $Y_0$. If we assume, in addition, $(Y_0,Y_1)\indep \Delta | X$, we can identify $F(y_0, y_1 | X)$ from the cross-section outcome distributions of participants and nonparticipants and estimate the joint distribution by using deconvolution.
+
+\begin{definition}  \textit {The convolution of probability distributions arises in probability theory and statistics as the operation that corresponds to the addition of independent random variables and, by extension, to forming linear combinations of random variables. The probability distribution of the sum of two or more independent random variables is the convolution of their individual distributions. The general formula for independent continuously distributed random variables with density functions $f$, $g$ is 
+$$h(z) = (f*g)(z) = \int_{-\infty}^{\infty} f(z-t)g(t)dt = \int _{-\infty}^{\infty} f(t)g(z-t)dt$$ Deconvolution is an algorithm-based process used to reverse the effects of convolution on recorded data. In general, the objective of deconvolution is to find the solution of a convolution equation of the form: $f*g = h$. Usually, $h$ is some recorded signal, and $f$ is some signal that we wish to recover, but has been convolved with some other signal $g$ before we recorded it. If we know $g$, or at least know the form of $g$, then we can perform deterministic deconvolution. However, if we do not know g in advance, then we need to estimate it. This is most often done using methods of statistical estimation. In our potential outcomes world, we observe $Y_1$, we wish to recover $Y_0$ and we employ the assumption of stochastic independence $Y_0 \indep \Delta | X$ we can identify the joint distribution of ($y_0$ and $y_1$. The convolution equation can be stated as: $(y_1, y_0)*\Delta = y_1$.}
+\end{definition}
+
+\paragraph{Random coefficient regression approaches}
+In a regression setting in which means and variances are assumed to capture all of the relevant information about the distributions of outcomes and treatment effects, the convolution approach discussed in the preceding section is equivalent to the traditional normal random coefficient model.
+
+
+\subsubsection{Approaches using information on agent choices}
+Unlike the method of matching or the methods based on particular assumptions about dependence between $Y_0$ and $Y_1$, the method based on revealed preference capitalizes on a close relationship between ($Y_0$, $Y_1$) and decisions about program participation. Participation includes voluntary entry into a program or attrition from it.
+
+\pagebreak
+\subsection{Causal Inference, Imbens et Rubin, 2015}
+The fundamental notion underlying our approach is that causality is tied to an action (or manipulation, treatment, or intervention), applied to a unit. Given a unit and a set of actions, we associate each action-unit pair with a potential outcome. We refer to these outcomes as potential outcomes because only one will ultimately be realized and therefore possibly observed: the potential outcome corresponding to the action actually taken.
+
+The causal effect of one action or treatment relative to another involves the comparison of these potential outcomes, one realized (and perhaps, though not necessarily, observed), and the others not realized and therefore not observable. There are two important aspects of this \textbf{definition} of a causal effect. First, the definition of the causal effect depends on the potential outcomes, but it does not depend on which outcome is actually observed. Second, the causal effect is the comparison of potential outcomes, for the same unit, at the same moment in time post-treatment. In particular, the causal effect is not defined in terms of comparisons of outcomes at different times.
+
+For the \textbf{estimation} of causal effects, as opposed to the definition of causal effects, we will need to make different comparisons from the comparisons made for their definitions. For  estimation and inference, we need to compare observed outcomes, that is, observed realizations of potential outcomes, and because there is only one realized potential outcome per unit, we will need to consider multiple units. For estimation it will also be critical to know about, or make assumptions about, the reason why certain potential outcomes were realized and not others. That is, we will need to think about the assignment mechanism. However, we do not need to think about the assignment mechanism for defining causal effects: we merely need to do the thought experiment of the manipulations leading to the definition of the potential outcomes.
+
+\subsubsection{The SUTVA}
+The stable unit treatment value assumption, or SUTVA (Rubin, 1980a) incorporates both te idea that units do not interfere with one another and the concept that for each unit there is only a single version of each treatment level.
+
+\theoremstyle{definition}
+\begin{definition}\textit{The Stable Unit Treatment Value Assumption (SUTVA) assumption states that potential outcomes for any unit do not vary with the treatments assigned to other units, and, for each unit, there are no different forms or versions of each treatment level, which lead to different potential outcomes.}
+\end{definition}
+
+There are two critical components in the SUTVA definition: (i) the no-interference component, i.e. the treatment applied to one unit does not affect the outcome for other units and (ii) no hidden variations of treatments, i.e. an individual receiving a specific treatment level cannot receive different forms of that treatment.
+
+\theoremstyle{definition}
+\begin{definition}\textit{Exclusion restrictions are assumptions that rely on external, substantive, information to rule out the existence of a causal effect of a particular treatment relative to an alternative.}
+\end{definition}
+
+\subsubsection{The Assignment Mechanism}
+
+Let us index the units in the population of size $N$ by $i$, taking on values $1, ... , N$, and let the treatment indicator $D_i$ take on the values $0$ (the control treatment) and $1$ (the active treatment). We have one realized (and possibly observed) potential outcome for each unit.We have one realized (and possibly observed) potential outcome for each unit. For unit $i$, now $i\in{1,....,N}$, let $Y_{i}^{obs}$ denote this realized (and possibly observed) outcome: 
+
+\[ Y_{i}^{obs} = Y_i(D_i) = \begin{cases} \mbox{$Y_i(0)$,} & \mbox{if } D_i = 0 \\ \mbox{$Y_i(1)$,} & \mbox{if} D_i = 1\end{cases} \]
+
+\begin{definition}\textit{The Assignment Mechanism is the method by which each individual came to receive the treatment actually received. }
+\end{definition}
+
+Because causal effects are defined by comparing potential outcomes (only one of which can ever be observed), they are \textbf{well defined} irrespective of the actions actually taken. But, because we observe at most half of all potential outcomes, and none of the unit-level causal effects, there is an \textbf{inferential problem} associated with assessing causal effects. In this sense, the problem of causal inference is, as pointed out in Rubin (1974), a missing data problem: given any treatment assigned to an individual unit, the potential outcome associated with any alternate treatment is missing. A key role is therefore played by the missing data mechanism, or, as we refer to it in the causal inference context, the assignment mechanism.
+
+The presence of unit-specific background attributes, also referred to as pre-treatment variables, or covariates, and denoted in this text by the $K$-component row vector $X_i$ for unit $i$, can assist to predict the missing potential outcome. The key characteristic of these covariates is that they are a priori known to be unaffected by the treatment assignment, i.e. they are permanent characteristics of units, or that they took on their values prior to the treatment being assigned. 
+
+The effect of covariates on the assignment mechanism stemming from the potential differences in background characteristics between those taking the active treatment and those taking the control treatment. At the same time, these characteristics may be associated with the potential outcomes. As a result, assumptions about the assignment mechanism and its possible freedom from dependence on potential outcomes are typically more plausible within subpopulations that are homogeneous with respect to some covariates, that is, conditionally given the covariates, rather than unconditionally.
+
+\end{document}
